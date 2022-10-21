@@ -1,0 +1,169 @@
+@use "variables" as v;
+@use "mixins" as m;
+*    {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body {
+    height: 100%;
+}
+html {
+    scroll-behavior: smooth;
+  }
+img {
+    max-width: 100%;
+}
+ 
+.bground {
+    display: flex;
+    background-image: url(./../assets/negative-space-black-forest-dawn.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    justify-content: center;
+}
+    .hamburger-menu {
+        @include m.hamburger;
+        @include m.desktop;
+     
+    }
+.front-font {
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    top: 30%;
+h1 {
+    color: v.$txtColor;
+    padding: 20px;
+}
+h2 {
+    @include m.headStyle;
+}
+}
+.pilen {
+    @include m.btnArrows;
+    i {
+        color: white;
+    }
+}
+.pilen2 {
+    position: relative;
+    font-size: 1.8em;
+    bottom: 0;
+    padding: 10px;
+    @include m.desktop {
+        width: 100%;
+        text-align: center;
+    }
+    i {
+        color: black;
+    }
+}
+.about {
+    h2 {
+    padding: 30px;
+    @include m.desktop {
+    width: 100vw;
+    text-align: center;
+    
+    }
+}
+    h3 {text-align: center;
+        padding: 20px;
+    }
+    
+    background-color: white;
+    // position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include m.desktop {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    &__person {
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    @include m.desktop {
+        width: 35vw;
+    }
+        }
+    &__pic {
+        border-radius: 50%;
+        box-shadow: 0px 0px 40px grey;
+        margin-bottom: 25px;
+    }
+    &__detailed-info {
+            background-color: lightgray;
+            width: 70vw;
+            border-radius: 5px;
+            padding: 30px;
+            margin-bottom: 40px;
+        @include m.desktop {
+        width: 100%;    
+        }
+            i {
+                font-size: 40px;
+            }
+        }
+}
+
+.contact 
+ {  
+    width:100vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    justify-content: center;
+    // gap: 10px;
+    padding: 50px;
+    font-size:x-large;
+
+    &__all {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    
+        @include m.desktop {
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+    
+    
+    &__adress, &__email-tel, &__social {
+    // width: 70vw;
+    gap: 10px;
+    padding-bottom: 20px;
+    text-align: left;
+    display:flex ;
+    flex-direction: column;
+    }
+    &__social {
+        img {width: 1em;
+        margin-right: 20px;}
+        a {
+            color: inherit;
+            text-decoration: inherit;
+            margin-bottom: 5px;
+            display: inherit;
+        }
+    }
+
+ }
