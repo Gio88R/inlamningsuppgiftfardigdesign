@@ -14,8 +14,9 @@ html {
 img {
     max-width: 100%;
 }
- 
-.bground {
+
+
+.bground {      /*landing page*/
     display: flex;
     background-image: url(./../assets/negative-space-black-forest-dawn.jpg);
     height: 100vh;
@@ -43,6 +44,7 @@ h2 {
     @include m.headStyle;
 }
 }
+// --------- Buttons -----------------d
 .pilen {
     @include m.btnArrows;
     i {
@@ -62,7 +64,9 @@ h2 {
         color: black;
     }
 }
-.about {
+
+/*-----------------page 2 -------------------*/
+.about {        
     h2 {
     padding: 30px;
     @include m.desktop {
@@ -76,7 +80,6 @@ h2 {
     }
     
     background-color: white;
-    // position: relative;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -91,18 +94,13 @@ h2 {
     }
     
     &__person {
-        width: 60vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include m.imgBoxes;
     @include m.desktop {
         width: 35vw;
     }
         }
     &__pic {
-        border-radius: 50%;
-        box-shadow: 0px 0px 40px grey;
-        margin-bottom: 25px;
+        @include m.imgStyle
     }
     &__detailed-info {
             background-color: lightgray;
@@ -118,17 +116,15 @@ h2 {
             }
         }
 }
-
+/*-----------------Footer -------------------*/
 .contact 
  {  
     width:100vw;
-    background-color: black;
-    color: white;
+    background-color: v.$secondaryColor;
+    color: v.$txtColor;
     display: flex;
-    // justify-content: center;
     align-items: center;
     justify-content: center;
-    // gap: 10px;
     padding: 50px;
     font-size:x-large;
 
@@ -148,7 +144,6 @@ h2 {
     
     
     &__adress, &__email-tel, &__social {
-    // width: 70vw;
     gap: 10px;
     padding-bottom: 20px;
     text-align: left;

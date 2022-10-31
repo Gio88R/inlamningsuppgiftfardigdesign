@@ -5,16 +5,16 @@
     padding: 25px;
 }
 @mixin imgStyle {
-        width: 60vw;
-        height: 250px;
-        border-radius: 50%;
-        box-shadow: 0px 0px 40px grey;
-        margin-bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 40px grey;
+    margin-bottom: 25px;
 }
 
 @mixin imgBoxes {
-    width: 60vw;
-    margin-bottom: px;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @mixin btnArrows {
     position: absolute;
@@ -24,12 +24,6 @@
     text-decoration: none ;
     
 }
-@mixin footerLook    {
-        padding-left: 20%;
-        padding-bottom: 5%;
-        color: white;
-    }
-
 
 @mixin desktop {
       @media screen and (min-width: v.$desktop_breakpoint){
@@ -42,6 +36,7 @@
   }
 }
 
+/* ------------ burgernav ------------*/
 @mixin hamburger {
 
     #menu__toggle {
