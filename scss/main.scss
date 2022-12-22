@@ -14,7 +14,46 @@ html {
 img {
     max-width: 100%;
 }
-
+.nav {
+    @include m.phone {
+        display: none;
+    }
+        background-color: rgba(238, 233, 233, 0.133);
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    width: 100%;
+    position: absolute;
+    justify-content: end;
+    display: flex;
+    ul {
+        width: 20%;
+        display: flex;
+        list-style-type: none;
+        padding: 20px;
+        justify-content: space-around;
+        font-size: larger;
+        text-decoration: white;
+      }
+}
+// .nav {
+//     position: absolute;
+//     display: flex;
+//     width: 100%;
+// }
+// .nav-wrapper {
+//     @include m.phone {
+//         display: none;
+//     }
+//     @include m.desktop {
+//         // background-color: rgba(238, 233, 233, 0.133);
+//         display: flex;
+//         width: 100%;
+//         flex-direction: row;
+//         position: absolute;
+        
+// } }
 
 .bground {      /*landing page*/
     display: flex;
@@ -22,12 +61,14 @@ img {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
 }
     .hamburger-menu {
         @include m.hamburger;
-        @include m.desktop;
+        @include m.desktop {
+            display: none;
+        }
      
     }
 .front-font {
@@ -70,7 +111,7 @@ h2 {
     h2 {
     padding: 30px;
     @include m.desktop {
-    width: 100vw;
+    width: 100%;
     text-align: center;
     
     }
@@ -80,13 +121,13 @@ h2 {
     }
     
     background-color: white;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     @include m.desktop {
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -119,7 +160,7 @@ h2 {
 /*-----------------Footer -------------------*/
 .contact 
  {  
-    width:100vw;
+    width:100%;
     background-color: v.$secondaryColor;
     color: v.$txtColor;
     display: flex;
@@ -135,7 +176,7 @@ h2 {
         align-items: left;
     
         @include m.desktop {
-            width: 100vw;
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
